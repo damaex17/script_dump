@@ -32,7 +32,7 @@ def main():
   gpg = f.read()
   f.close
   q = Queue()
-  for i in bruteforce_char(characters, 3):
+  for i in bruteforce_char(characters, 4):
     if q.empty():
       p = Process(target=work, args=(i,gpg,q))
       p.start()
